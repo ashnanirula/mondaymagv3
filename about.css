@@ -1,7 +1,7 @@
 /* global aesthetics */
 @font-face {
     font-family: 'burndown';
-    src: url('./assets/burndown/Burndown.otf');
+    src: url('./burndown/Burndown.otf');
 }
 
 .pink{
