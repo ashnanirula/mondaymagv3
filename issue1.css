@@ -316,7 +316,7 @@ header {
     flex-wrap: wrap;
     width: 360px;
     min-width: 50%;
-    padding-bottom: 1rem;
+    padding: 1rem;
 }
 
 .ask-us, .page{
@@ -440,8 +440,11 @@ header {
     height: 6rem;
 }
 
-.mmm button{
+.mmm action{
     font-weight: 400;
+    color: #544f4c;
+}
+.mmm button{
     margin-top: 1rem;
     padding: 1rem;
     border-style: solid;
