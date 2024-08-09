@@ -1,0 +1,456 @@
+/* global aesthetics */
+@font-face {
+    font-family: 'burndown';
+    src: url('./burndown/Burndown.otf');
+}
+
+.pink{
+    color: #f2a2af;
+}
+
+.orange{
+    color: #fcba64;
+}
+
+.green{
+    color: #b9d671;
+}
+
+.lightpink{
+    color: #fddae0;
+}
+
+.lightorange{
+    color: #f8daad;
+}
+
+.lightgreen{
+    color: #e1eebd;
+}
+
+.pink-wavy:hover{
+    color: #f2a2af;
+    text-decoration: underline wavy #fddae0;
+}
+
+.orange-wavy:hover{
+    color: #fcba64;
+    text-decoration: underline wavy #f8daad;
+}
+
+.green-wavy:hover{
+    color: #544f4c;
+    text-decoration: underline wavy #b9d671;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: IBM Plex Mono, monospace;
+}
+
+body {
+    background-color: #fdfdf2;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: #544f4c;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+a:hover{
+    font-weight: 700;
+}
+
+p{
+    font-family: IBM Plex Mono, monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    color: #544f4c;
+}
+
+h1{
+    font-family: burndown;
+    color: #544f4c;
+    font-size: 3rem;
+}
+
+h3{
+    color: #544f4c;  
+}
+
+/* navbar */
+
+header {
+    position: relative;
+    padding: 0 2rem;
+    background-color: #fdfdf2;
+    box-shadow: 0 4px px 0 rgb(252, 186, 100, 0.2);
+}
+
+.navbar {
+    width: 100%;
+    height: 68px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn{
+    font-size: 1.25rem;
+    color: #544f4c;
+    cursor: pointer;
+    display: none;
+}
+
+/* dropdown */
+
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 200px;
+    height: 0;
+    /* background-color: #fdfdf2; */
+    background-image: linear-gradient(#f2a2af, #fcba64, #b9d671);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1000000;
+}
+
+.dropdown_menu.open{
+    height: 100px;
+}
+
+.dropdown_menu li{
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(max-width: 600px){
+    .navbar .links{
+        display: none;
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+}
+
+.hero {
+    /* width: 100%; */
+    height: auto;
+    background-image: url('./issue1/issue1-hero.png');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+}
+
+.overlay-content{
+    width: 100%;
+    height: auto;
+    padding-top: 2rem;
+}
+
+.overlay-content img{
+    width: 100%;
+    max-width: 1300px;  
+}
+
+.contents {
+    display: block;
+    background-color: #e1eebd;
+    padding: 2rem;
+    width: auto;
+}
+
+.contents h1, .contents li{
+    color: #544f4c;
+}
+
+/* pages */
+.page {
+    height: auto;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+.issue1-thescoop .page{
+    border-color: #f2a2af;
+    border-style: dashed;
+}
+
+.block1 {
+    padding: 2rem;
+    width: 360px;
+    min-width: 50%;
+    justify-content: center;
+}
+
+.block2 {
+    padding: 2rem;
+    width: 360px;
+    min-width: 50%;
+}
+
+.icon{
+    height: 3rem;
+}
+
+.title {
+    width: 350px;
+    min-width: 50%;
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+
+}
+
+.issue1-thescoop .subtitle{
+    font-size: 1.5rem;
+
+}
+
+/* the scoop */
+
+.ashna-chalk{
+    width: 320px;
+    min-width: 50%;
+    height: auto;
+    border-style: solid;
+    border-color: #f2a2af;
+    border-radius: 10px;
+}
+
+.issue1-thescoop .title{
+    justify-content: left;
+}
+
+/* the scribble */
+.thescribble{
+    background-image: url('./issue1/scribble-bg.JPEG');
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+}
+
+.thescribble-overlay-content{
+    width: 90%;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.thescribble-overlay-content img{
+    width: 90%;
+    max-width: 1300px;  
+}
+
+/* the canvas */
+.may-23rd-423pm{
+    width: 300px;
+    min-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.issue1-thecanvas .page{
+    border-color: #b9d671;
+}
+
+.issue1-thecanvas .block2{
+    background-color: #e1eebd;
+    border-radius: 10px;
+}
+
+.issue1-thecanvas .title{
+    width: 300px;
+    min-width: 50%;
+}
+
+.issue1-thecanvas h1{
+    font-size: 2.75rem;
+}
+
+/* ask us */
+.issue1-ask-us {
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    background-color: #fddae0;
+    padding: 2rem;
+}
+
+.ask-us-overlay-content{
+    width: 100%;
+    align-items: center;
+}
+
+.ask-us .title{
+    flex-wrap: wrap;
+    width: 360px;
+    min-width: 50%;
+    padding-bottom: 1rem;
+}
+
+.ask-us, .page{
+    border-style: none;
+}
+
+.issue1-ask-us .icon{
+    height: 5rem;
+}
+
+.answer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.response{
+    width: 360px;
+    min-width: 49%;
+    background: #fdfdf2;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.ashna .emily, .avatar{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-wrap: wrap;
+    float: left;
+    padding-right: 2rem;
+    padding-bottom: 1rem; 
+}
+
+.profile img{
+    width: 5rem;
+    border-radius: 100px;
+    padding: 0.5rem;
+}
+
+/* the corner */
+.blast-past {
+    width: 360px;
+    min-width: 50%;
+}
+
+.blast-past img{
+    width: 95%;
+    height: auto;
+}
+
+.right-side{
+    width: 360px;
+    min-width: 50%;
+    align-items: center;
+}
+
+.movies{
+    width: 100%;
+    padding-top: 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.issue1-thecorner .icon{
+    height: 4.5rem;
+}
+
+.issue1-thecorner .title{
+    width: 360px;
+    min-width: 100%;
+    padding-bottom: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.issue1-thecorner h1{
+    font-size: 3rem;
+}
+
+.movies img{
+    height: 120px;
+    border-radius: 10px;
+}
+
+.issue1-thecorner h3{
+   background-size:contain; 
+}
+
+.orange-bg{
+    background-color: #f8daad;
+}
+
+/* mmm */
+
+.mmm .page{
+    border-style: dashed;
+    padding: 2rem;
+    border-color:#544f4c;
+}
+
+.box{
+    width: auto;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.ashnammm {
+    background-color: #fddae0;
+}
+
+.emilymmm {
+    background-color: #f8daad;
+}
+
+.box img{
+    height: 6rem;
+}
+
+.mmm button{
+    font-weight: 400;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-style: solid;
+    border-color: #544f4c;
+    background-image: linear-gradient(to right,#f2a2af, #fcba64);
+    border-radius: 10px;
+}
+
+.mmm button:hover{
+    font-weight: 700;
+    cursor: pointer;
+}
